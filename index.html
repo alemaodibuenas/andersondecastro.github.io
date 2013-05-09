@@ -47,9 +47,10 @@
       var todosAmigos = "";
 
       for (i in response.data){
-        todosAmigos += response.data[i] + " - ";
-        console.log( "quantia desse objeto: " + response.data[i].length)
+        todosAmigos += response.data[i].name + " - ";
       }
+
+      console.log(response.data.length)
 
         document.getElementById("amigos").innerHTML = todosAmigos;
     });
