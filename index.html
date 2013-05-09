@@ -38,8 +38,16 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Bom te ver!, ' + response.name + '.');
-      document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + response.work;
+        var trampo = "";
+        
+        for(i in response.work){
+          trampo += response.work[i].name + "<br>";
+        }
+
+        document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + trampo;
+
+
+        console.log('Bom te ver!, ' + response.name + '.');
         console.log(response.work)
     });
 
