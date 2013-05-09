@@ -56,7 +56,7 @@
       var todosAmigos = "";
 
       for (i in response.data){
-        todosAmigos += response.data[i].name + " - ";
+        todosAmigos += '<a href="www.facebook.com/'+response.data[i].id+'">' + response.data[i].name + " </a> <hr>";
       }
 
       document.getElementById("amigos").innerHTML = todosAmigos;
