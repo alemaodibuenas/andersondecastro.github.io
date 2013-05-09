@@ -60,7 +60,7 @@
       var todosAmigos = "";
 
       for (i in response.data){
-        todosAmigos += '<a href="www.facebook.com/'+response.data[i].id+'">' + response.data[i].name + " </a> <hr>";
+        todosAmigos += '<a href="http://www.facebook.com/'+response.data[i].id+'" target="_blank">' + response.data[i].name + " </a> <hr>";
       }
 
       document.getElementById("amigos").innerHTML = todosAmigos;
