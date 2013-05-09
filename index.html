@@ -48,6 +48,7 @@
 
       for (i in response.data){
         todosAmigos += response.data[i] + " - ";
+        console.log( "quantia desse objeto: " + response.data[i].length)
       }
 
         document.getElementById("amigos").innerHTML = todosAmigos;
