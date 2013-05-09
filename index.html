@@ -41,7 +41,7 @@
         var trampo = "";
         
         for(i in response.work){
-          trampo += response.work[i].name + "<br>";
+          trampo += response.work[i].employer.name + "<br>";
         }
 
         document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + trampo;
