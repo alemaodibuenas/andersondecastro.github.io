@@ -50,10 +50,21 @@
         todosAmigos += response.data[i].name + " - ";
       }
 
-      console.log(response.data.length)
+      document.getElementById("amigos").innerHTML = todosAmigos;
 
-        document.getElementById("amigos").innerHTML = todosAmigos;
     });
+
+    // lista dos amigos!
+    FB.api("/" + response.data[300] + "/friends?limit=20", function (response) {
+          if (response.error) {
+              self.showErrorPage();
+          } else {
+              document.getElementById("amigos").innerHTML = response;
+              console.log("amigo response: " + response)
+          }
+      });
+
+
   }
 </script>
 <!--Below we include the Login Button social plugin. This button uses the JavaScript SDK to-->
