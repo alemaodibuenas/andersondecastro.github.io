@@ -44,7 +44,13 @@
 
     FB.api('/me/friends', function (response) {
       console.log( response );
-      document.getElementById("amigos").innerHTML = response.data.name;
+      var todosAmigos = "";
+
+      for (i in response.data){
+        todosAmigos += response.data[i] + " - ";
+      }
+
+        document.getElementById("amigos").innerHTML = todosAmigos;
     });
   }
 </script>
