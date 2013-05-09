@@ -42,7 +42,7 @@
       document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '.';
     });
 
-    FB.api('/me/friends', function (response) {
+    FB.api('/me/friends?limit=50', function (response) {
       console.log( response );
       var todosAmigos = "";
 
@@ -53,16 +53,6 @@
       document.getElementById("amigos").innerHTML = todosAmigos;
 
     });
-
-    // lista dos amigos!
-    FB.api("/" + response.data[300] + "/friends?limit=20", function (response) {
-          if (response.error) {
-              self.showErrorPage();
-          } else {
-              document.getElementById("amigos").innerHTML = response;
-              console.log("amigo response: " + response)
-          }
-      });
 
 
   }
