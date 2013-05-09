@@ -41,6 +41,11 @@
       console.log('Bom te ver!, ' + response.name + '.');
       document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '.';
     });
+
+    FB.api('/me/friends', function (response) {
+      console.log( response );
+      document.getElementById("amigos").innerHTML = response.data.name;
+    });
   }
 </script>
 <!--Below we include the Login Button social plugin. This button uses the JavaScript SDK to-->
@@ -48,6 +53,7 @@
 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
 
 <div id="mensagem"></div>
+<div id="amigos"></div>
 
 </body>
 </html>
