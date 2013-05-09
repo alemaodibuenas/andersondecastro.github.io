@@ -39,7 +39,8 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Bom te ver!, ' + response.name + '.');
-      document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + response.work.employer;
+      document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + response.work;
+        console.log(response.work)
     });
 
     FB.api('/me/friends?limit=50', function (response) {
