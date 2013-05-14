@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title> Anderson de Castro - Developer </title>
+	<link rel="stylesheet" type="text/css" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css">
 </head>
 <body>
 
