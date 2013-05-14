@@ -1,81 +1,77 @@
-<!doctype html>
 <html>
-<meta charset="UTF-8">
-<head>
-  <title> Simplesmente Testando... </title>
-</head>
-<body>
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '375101075944175', // App ID
-    channelUrl : 'ploomalabs.com/channel.html', // Channel File
-    status     : true, // check login status
-    cookie     : true, // enable cookies to allow the server to access the session
-    xfbml      : true  // parse XFBML
-  });
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Anderson de Castro - Developer | Instructor | Entusiast | ... and Angry Birds Player </title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="http://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <link rel="xhr-socket" href="/_sockets" />
 
-  FB.Event.subscribe('auth.authResponseChange', function(response) {
-    // Here we specify what we do with the response anytime this event occurs. 
-    if (response.status === 'connected') {
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      FB.login();
-    } else {
-      FB.login();
-    }
-  });
-  };
 
-  // Load the SDK asynchronously
-  (function(d){
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/en_US/all.js";
-   ref.parentNode.insertBefore(js, ref);
-  }(document));
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="897158" name="octolytics-actor-id" /><meta content="a3a48354eac401ab50135c6432a272269889ee6b38f4b3106e23f6ef335e2ad5" name="octolytics-actor-hash" />
 
-  // Here we run a very simple test of the Graph API after login is successful. 
-  // This testAPI() function is only called in those cases. 
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-        var trampo = "";
-        
-        for(i in response.work){
-          trampo += response.work[i].employer.name + "<br>";
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="E4NKT1J+FYKXs73/Lka+HhT9cpgays68iQoFUl1Y3VI=" name="csrf-token" />
+
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-e3e29680cd147cf9dea0c90086d7346fcea03180.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-bb7be6310c4b8c0cf8369d55680996e1b8bb66f0.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+      <meta http-equiv="x-pjax-version" content="0e0cd2512f7722bb9ec24ba81290174f">
+
+      <link rel="stylesheet" type="text/css" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css">
+    <style> 
+        @font-face {
+          font-family: 'HappyMonkey';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Happy Monkey'), local('HappyMonkey-Regular'), url(http://themes.googleusercontent.com/static/fonts/happymonkey/v2/c2o0ps8nkBmaOYctqBq1rXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
         }
+        .titulo { font-family: "HappyMonkey"; } 
+    </style>
 
-        document.getElementById("mensagem").innerHTML = 'Bom te ver!, ' + response.name + '. <br> Você ja trabalhou na ' + trampo;
+    <meta property="og:title" content="Anderson de Castro - Developer"/>
+    <meta property="og:type" content="githubog:gitrepository"/>
+    <meta property="og:url" content="http://andersondecastro.github.io/"/>
+    <meta property="og:image" content="https://secure.gravatar.com/avatar/c4e39a1df95fdff6509d0e89af075d05?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"/>
+    <meta property="og:site_name" content="GitHub - Anderson"/>
+    <meta property="og:description" content="Página de Anderson de Castro"/>
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@GitHub">
+    <meta property="twitter:title" content="andersondecastro"/>
 
-
-        console.log('Bom te ver!, ' + response.name + '.');
-        console.log(response.work)
-    });
-
-    FB.api('/me/friends?limit=50', function (response) {
-      console.log( response );
-      var todosAmigos = "";
-
-      for (i in response.data){
-        todosAmigos += '<a href="http://www.facebook.com/'+response.data[i].id+'" target="_blank">' + response.data[i].name + " </a> <hr>";
-      }
-
-      document.getElementById("amigos").innerHTML = todosAmigos;
-
-    });
+    <meta name="description" content="Página pessoal :: Desenvolvedor Anderson de Castro" />
 
 
-  }
-</script>
-<!--Below we include the Login Button social plugin. This button uses the JavaScript SDK to-->
-<!--present a graphical Login button that triggers the FB.login() function when clicked.-->
-<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+    <meta content="897158" name="octolytics-dimension-user_id" /><meta content="9862913" name="octolytics-dimension-repository_id" />
+  
+  </head>
+<body>
 
-<div id="mensagem"></div>
-<div id="amigos"></div>
+	<div class="container">
+		<div class="row">
+			<div class="span12" style="text-align:center;">
+				<hr>
+				<img class="img-circle" src="https://secure.gravatar.com/avatar/c4e39a1df95fdff6509d0e89af075d05?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="220">
+				<p class="titulo"> <h3> Anderson de Castro </h3> </p>
+				</hr>
+				<p class="muted"> anderson.in.net@gmail.com </p>
+				<p class="muted"> fb/anderson.dCastro </p>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
