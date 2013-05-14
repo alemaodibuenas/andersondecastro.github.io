@@ -2,11 +2,18 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title> Anderson de Castro </title>
+	<title> Anderson de Castro - Developer </title>
 </head>
 <body>
 
-	<h1> Bem vindo a Minha Página pessoal no Github! </h1>
+	<div class="container">
+		<div class="row">
+			<div class="span12" style="text-align:center;">
+				<img class="img-circle" src="http://www.gravatar.com/avatar/c4e39a1df95fdff6509d0e89af075d05">
+				<p class="help-block"> Anderson de Castro </p>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
