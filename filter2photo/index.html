@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title> Filter2Photo </title>
+	<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: 'The Girl Next Door', cursive;
+		}
+		.fontNormal {
+			font-family: 'Trebuchet MS';
+			padding: 1px;
+		}
+		.imagem {
+			width: 600px;
+		}
+		.spanCSS {
+			color: orange;
+			font-size: 10px;
+		}
+		.stage {
+			float: left;
+			width: 70%;
+			text-align: center;
+		}
+		.control {
+			background: #EEE;
+			padding: 10px;
+			margin: 10px auto;
+
+			border-radius: 20px
+		}
+		.control label {
+			display: block;
+			font-size: 12px;
+			color: #F00;
+		}
+		.controls {
+			float: left;
+			width: 27%;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="controls">
+		<p>
+			<div class="control">
+				<label for=""> Blur (desfocar) </label>
+				<input type="range" class="blur" value="0">
+				<p class="fontNormal">  </p>
+			</div>
+
+			<div class="control">
+				<label for=""> Invert </label>
+				<input type="range" class="invert" value="0">
+				<p class="fontNormal">  </p>
+			</div>
+
+			<div class="control">
+				<label for=""> Brightness </label>
+				<input type="range" class="brightness" value="100">
+				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "brightness(<span class="vBrightness">100</span>%)" </p>
+			</div>
+
+			<div class="control">
+				<label for=""> Grayscale </label>
+				<input type="range" class="grayscale" value="0">
+				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "grayscale(<span class="vGrayscale">0</span>%)" </p>
+			</div>
+
+			<div class="control">
+				<label for=""> Hue Rotate </label>
+				<input type="range" class="huerotate" value="0">
+				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "hue-rotate(<span class="vHueRotate">0</span>deg)" </p>
+			</div>
+		</p>
+	</div>
+
+	<div class="stage">
+		<h1> Filter2Photo (CSS3 Filters) </h1>
+		<p> (lembre-se de adicionar os prefixos para compatibilidade de navegadores, quando necessário!) </p>
+
+		<p>
+			<img src="1.jpeg" alt="" class="imagem">
+		</p>
+		<hr>
+		<p class="codeGerado">
+		</p>
+	</div>
+
+
+	<!-- Scriptania! -->
+	<script src="filter2photo.js"></script>
+</body>
+</html>
