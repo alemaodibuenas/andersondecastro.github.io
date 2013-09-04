@@ -5,12 +5,11 @@
 	<title> Filter2Photo </title>
 	<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
 	<style>
-		body {
+		.stage h1, .stage > p {
 			font-family: 'The Girl Next Door', cursive;
 		}
-		.fontNormal {
+		body, p.codeGerado{
 			font-family: 'Trebuchet MS';
-			padding: 1px;
 		}
 		.imagem {
 			width: 600px;
@@ -50,31 +49,26 @@
 			<div class="control">
 				<label for=""> Blur (desfocar) </label>
 				<input type="range" class="blur" value="0">
-				<p class="fontNormal">  </p>
 			</div>
 
 			<div class="control">
 				<label for=""> Invert </label>
 				<input type="range" class="invert" value="0">
-				<p class="fontNormal">  </p>
 			</div>
 
 			<div class="control">
 				<label for=""> Brightness </label>
 				<input type="range" class="brightness" value="100">
-				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "brightness(<span class="vBrightness">100</span>%)" </p>
 			</div>
 
 			<div class="control">
 				<label for=""> Grayscale </label>
 				<input type="range" class="grayscale" value="0">
-				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "grayscale(<span class="vGrayscale">0</span>%)" </p>
 			</div>
 
 			<div class="control">
 				<label for=""> Hue Rotate </label>
 				<input type="range" class="huerotate" value="0">
-				<p class="fontNormal"> <span class="spanCSS">css code:</span> filter: "hue-rotate(<span class="vHueRotate">0</span>deg)" </p>
 			</div>
 		</p>
 	</div>
